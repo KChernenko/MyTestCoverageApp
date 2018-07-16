@@ -4,7 +4,6 @@ ext {
     targetSdkVer = 27
 
     versionName = '1.0'
-    testersMails = '.ci/internal/beta_distribution_emails.txt'
 
     // Kotlin
     kotlinVer = '1.2.51'

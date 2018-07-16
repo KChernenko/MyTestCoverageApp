@@ -1,0 +1,33 @@
+ext {
+    compileSdkVer = 27
+    minSdkVer = 21
+    targetSdkVer = 27
+
+    versionName = '1.0'
+    testersMails = '.ci/internal/beta_distribution_emails.txt'
+
+    // Kotlin
+    kotlinVer = '1.2.51'
+    androidKtxVer = '0.3'
+
+    // Support library
+    supportLibraryVer = '27.1.1'
+    constraintLayout = '1.0.2'
+
+    // Dependencies
+    supportDependencies = [
+            appCompat       : "com.android.support:appcompat-v7:$supportLibraryVer",
+            support         : "com.android.support:support-v4:$supportLibraryVer",
+            design          : "com.android.support:design:$supportLibraryVer",
+            cardView        : "com.android.support:cardview-v7:$supportLibraryVer",
+            recyclerView    : "com.android.support:recyclerview-v7:$supportLibraryVer",
+            constraintLayout: "com.android.support.constraint:constraint-layout:$constraintLayout"
+    ]
+
+    kotlinDependencies = [
+            kotlinStdLib : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVer",
+            kotlinReflect: "org.jetbrains.kotlin:kotlin-reflect:$kotlinVer",
+            androidKtx   : "androidx.core:core-ktx:$androidKtxVer"
+    ]
+
+}

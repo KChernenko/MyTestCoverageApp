@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        androidTest.assets.srcDirs += files("$projectDir/schemas".toString())
+    }
+
+    testOptions {
+        unitTests.all {
+            jvmArgs '-noverify'
+        }
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt' // multiple libs have this file -> cause build error
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // Kotlin
+    implementation kotlinDependencies.kotlinStdLib
+    implementation kotlinDependencies.kotlinReflect
+
+    // Android Support
+    implementation supportDependencies.appCompat
+    implementation supportDependencies.support
+    implementation supportDependencies.design
+    implementation supportDependencies.cardView
+    implementation supportDependencies.recyclerView
+    implementation supportDependencies.constraintLayout
+}

@@ -38,4 +38,10 @@ dependencies {
     implementation supportDependencies.cardView
     implementation supportDependencies.recyclerView
     implementation supportDependencies.constraintLayout
+
+    // Testing
+    testImplementation testDependencies.jUnit
+    testImplementation testDependencies.mockito
+    testImplementation testDependencies.mockitoKotlin
+    testImplementation testDependencies.assertJ
 }

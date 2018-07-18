@@ -13,6 +13,12 @@ ext {
     supportLibraryVer = '27.1.1'
     constraintLayout = '1.0.2'
 
+    // Unit-tests
+    jUnitVer = '4.12'
+    mockitoVer = '2.15.0'
+    mockitoKotlinVer = '1.5.0'
+    assertJVer = '3.9.0'
+
     // Dependencies
     supportDependencies = [
             appCompat       : "com.android.support:appcompat-v7:$supportLibraryVer",
@@ -27,6 +33,14 @@ ext {
             kotlinStdLib : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVer",
             kotlinReflect: "org.jetbrains.kotlin:kotlin-reflect:$kotlinVer",
             androidKtx   : "androidx.core:core-ktx:$androidKtxVer"
+    ]
+
+    testDependencies = [
+            jUnit        : "junit:junit:$jUnitVer",
+            mockito      : "org.mockito:mockito-core:$mockitoVer",
+            mockitoKotlin: "com.nhaarman:mockito-kotlin:$mockitoKotlinVer",
+            assertJ      : "org.assertj:assertj-core:$assertJVer",
+            mockitoInline: "org.mockito:mockito-inline:$mockitoVer"
     ]
 
 }

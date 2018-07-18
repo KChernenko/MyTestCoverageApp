@@ -8,6 +8,12 @@ dependencies {
     // Kotlin
     implementation kotlinDependencies.kotlinStdLib
     implementation kotlinDependencies.kotlinReflect
+
+    // Testing
+    testImplementation testDependencies.jUnit
+    testImplementation testDependencies.mockito
+    testImplementation testDependencies.mockitoKotlin
+    testImplementation testDependencies.assertJ
 }
 
 sourceCompatibility = "1.7"
